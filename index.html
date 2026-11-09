@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toonish Universe Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h2>Toonish Universe<span>.</span></h2>
+        <p>THE ULTIMATE CARTOON QUIZ</p>
+    </header>
+
+    <!-- 1. WELCOME SCREEN -->
+    <main class="welcome-container" id="welcome-screen">
+        <div class="welcome-content">
+            <span class="tag">YOUR CHILDHOOD, YOUR QUIZ</span>
+
+            <h1>
+                How well do you<br>
+                know your <span>cartoons?</span>
+            </h1>
+
+            <p class="description">
+                From Ben 10 to Doraemon, from Tom and Jerry
+                to Shinchan. Take a trip down memory lane
+                and test how much you remember!
+            </p>
+
+            <div class="quiz-info">
+                <div>
+                    <h3>100+</h3>
+                    <p>Cartoons</p>
+                </div>
+                <div>
+                    <h3>09</h3>
+                    <p>Categories</p>
+                </div>
+                <div>
+                    <h3>∞</h3>
+                    <p>Memories</p>
+                </div>
+            </div>
+
+            <button type="button" class="start-btn" id="start-btn">
+                Start Quiz <span>→</span>
+            </button>
+
+            <p class="bottom-text">
+                No time machine needed. Just your memory.
+            </p>
+        </div>
+
+        <div class="welcome-image">
+            <div class="image-box">
+                <img src="https://images.openai.com/static-rsc-4/AYzR13aUJbWr6_VHu2OnG_zbzZQAInN-yAzN7Y9eo4Q3-fE8EXKf_jH7BGgibp8TY3TR0IgPKmdECSlp5v0_AneVxHZ1iYPJUh4IKt-StJa1vv_n5FhyPYCTCuVEJNL3T8QTYoowXyQE-4MjQryOqiRVlfkczKPqpVyOLW5u0Uw7Mut-eGiY7oSfflDcq7wu?purpose=fullsize"
+                    alt="Colorful nostalgic entertainment illustration">
+            </div>
+            <span class="image-caption">RELIVE THE GOOD OLD DAYS ✦</span>
+        </div>
+    </main>
+
+    <!-- 2. QUIZ CONTAINER (Left Cartoon Poster + Right Quiz Card) -->
+    <main id="quiz-container">
+
+        <!-- Left Cartoon Poster Box (Yellow section from your screenshot) -->
+        <aside class="poster-panel">
+            <div class="poster-frame">
+                <img id="cartoon-poster" src="" alt="Cartoon Poster">
+            </div>
+            <span class="poster-caption" id="poster-caption">NOW PLAYING ✦</span>
+        </aside>
+
+        <!-- Right Quiz Card -->
+        <section class="quiz-card">
+            <header class="quiz-header">
+                <div>
+                    <h2>QUIZ<span>.</span></h2>
+                    <p>THE ULTIMATE CARTOON CHALLENGE</p>
+                </div>
+                <span class="question-count">01 / 20</span>
+            </header>
+
+            <div class="score-section">
+                <div>
+                    <span class="section-label">YOUR SCORE</span>
+                    <h3 id="score">0 <span>/ 100</span></h3>
+                </div>
+                <span class="category" id="category">JETIX</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <section class="question-text">
+                <span class="section-label" id="question-label">QUESTION 01</span>
+                <h2 id="question">
+                    What is the name of Ben 10's first alien transformation?
+                </h2>
+                <p>Choose the correct answer from the options below.</p>
+            </section>
+
+            <div id="options-container" class="options-container">
+                <button type="button" class="option-btn">
+                    <span>A</span> Heatblast
+                </button>
+                <button type="button" class="option-btn">
+                    <span>B</span> Four Arms
+                </button>
+                <button type="button" class="option-btn">
+                    <span>C</span> XLR8
+                </button>
+                <button type="button" class="option-btn">
+                    <span>D</span> Diamondhead
+                </button>
+            </div>
+
+            <div class="quiz-bottom">
+                <span>TAKE YOUR TIME. TRUST YOUR MEMORY.</span>
+                <button type="button" id="next-btn">Next Question <span>→</span></button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. RESULT SCREEN -->
+    <main id="result-screen">
+        <div class="result-card">
+            <span class="result-tag">QUIZ COMPLETED ✦</span>
+            <h1 id="result-message">Cartoon Legend!</h1>
+            <p id="result-description">You answered 0 out of 20 questions correctly!</p>
+
+            <div class="score-circle">
+                <div class="score-content">
+                    <h2 id="final-score">0</h2>
+                    <span>POINTS</span>
+                </div>
+            </div>
+
+            <div class="result-stats">
+                <div class="stat-box">
+                    <h3 id="correct-answers">0</h3>
+                    <p>Correct</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="wrong-answers">0</h3>
+                    <p>Wrong</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="accuracy">0%</h3>
+                    <p>Accuracy</p>
+                </div>
+            </div>
+
+            <button type="button" id="restart-btn">Play Again <span>↻</span></button>
+            <p class="result-footer">THANK YOU FOR PLAYING TOONISH UNIVERSE</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Cartoon Universe Quiz. Made for cartoon lovers.</p>
+    </footer>
+
+    <!-- JAVASCRIPT FILES (Must be in this exact order) -->
+    <script src="image.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
